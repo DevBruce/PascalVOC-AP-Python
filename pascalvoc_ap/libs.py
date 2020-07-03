@@ -99,7 +99,7 @@ def get_all_ious_and_used_vals(preds, gts_map_with_img, iou_thr):
         _, *pred_pts, img_id = pred
 
         current_ious = list()
-        gt_info_list = gts_map_with_img[img_id]
+        gt_info_list = gts_map_with_img.get(img_id)
         for gt_info in gt_info_list:
             gt_pts, used = gt_info.get('pts'), gt_info.get('used')
             iou = get_iou(pred_pts, gt_pts)
