@@ -109,7 +109,7 @@ def get_all_ious_and_used_vals(preds, gts_map_with_img, iou_thr):
             iou = max(current_ious)
             mapped_gt_idx = current_ious.index(iou)
             used = gt_info_list[mapped_gt_idx].get('used')
-            if iou > iou_thr and not used:
+            if iou >= iou_thr and not used:
                 gt_info_list[mapped_gt_idx]['used'] = True
         else:
             iou, used = 0.0, False
@@ -136,7 +136,7 @@ def get_pr(ious, used_vals, gt_len, iou_thr):
     recalls = list()
 
     for iou, used in zip(ious, used_vals):
-        if iou > iou_thr and not used:
+        if iou >= iou_thr and not used:
             TP += 1
         else:
             FP += 1

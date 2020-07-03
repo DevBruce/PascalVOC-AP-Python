@@ -1,6 +1,6 @@
-# PascalVOC AP with Python
+# Pascal VOC AP with Python
 
-> Ref: <http://host.robots.ox.ac.uk/pascal/VOC/>
+> Pascal VOC: <http://host.robots.ox.ac.uk/pascal/VOC/>
 
 <br><br>
 
