@@ -13,7 +13,7 @@ setup(
     long_description=open(README_PATH, encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     license='MIT',
-    version='1.0.2',
+    version='1.0.3',
     url='https://github.com/DevBruce/PascalVOC-AP-Python',
     packages=find_packages(),
     python_requires='>=3.7',
